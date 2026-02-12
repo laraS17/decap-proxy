@@ -100,7 +100,7 @@ Even with that change, the OAuth proxy will be available at the default workers.
 workers_dev = false
 ```
 
-Finally, if the github repository that holds the source to your website is a private repository, then you should change the declaration of the `GITHUB_REPO_PRIVATE` in wrangler.toml to set the value to 1.
+The OAuth proxy requests the GitHub scope `repo,user`, which is required when the website repository is private.
 
 ### 2.3 Establish Connection to Cloudflare
 
@@ -154,5 +154,5 @@ backend:
 
 Once that configuration has been pushed out to your website, you can test the live Decap CMS panel, and hopefully everything will work as planned.
 
-If you do manage to authenticate using the GitHub OAuth App, but DecapCMS gives you an error about the repository not being found, make sure you have configured the repository name and owner correctly in your config.yml file. Also if your repo is private, make sure you configured the `GITHUB_REPO_PRIVATE` variable correctly in step 2.2.
+If you do manage to authenticate using the GitHub OAuth App, but DecapCMS gives you an error about the repository not being found, make sure you have configured the repository name and owner correctly in your config.yml file and that the OAuth App granted `repo,user`.
 
