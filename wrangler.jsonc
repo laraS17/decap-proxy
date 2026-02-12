@@ -1,5 +1,5 @@
 {
-  "name": "decap-proxy-docs-carrefour",
+  "name": "docs-carrefour-decap-proxy",
   "main": "src/index.ts",
   "compatibility_date": "2026-02-12",
   "compatibility_flags": ["nodejs_compat"]
